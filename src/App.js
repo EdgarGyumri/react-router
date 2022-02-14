@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import {History, Home, Library, Populars, Subscribes} from './components';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container'>
+        <header>
+          <Link to='/'>Youtube</Link>
+        </header>
+        <section className='content'>
+          <div className='content-block'>
+            <Link to='/'>Главная</Link>
+            <Link to='/populars'>Навигатор</Link>
+            <Link to='/subscribes'>Подписки</Link>
+            <Link to='/library'>Библиотека</Link>
+            <Link to='/history'>История</Link>
+            {/* <Link>Смотреть позже</Link>
+            <Link>Ваши клипы</Link> */}
+          </div>
+          <div className='content-block'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/populars' element={<Populars />} />
+              <Route path='/subscribes' element={<Subscribes />} />
+              <Route path='/library' element={<Library />} />
+              <Route path='/history' element={<History />} />
+            </Routes>
+          </div>
+      </section>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.subscribes-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subscribes-cards .card{
+    margin-right: 50px;
+}
+
+.subscribes-cards .card-img{
+    width: 150px;
+}

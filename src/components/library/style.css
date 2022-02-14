@@ -1,0 +1,9 @@
+.library-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.library .later{
+    margin-top: 50px;
+}
